@@ -11,10 +11,10 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center text-danger"> {{ $titolo }}</h1>
+        <h1 class="text-center text-danger"> {{ $pageTitle }}</h1>
 
         <ul>
-            @foreach ($lista as $listItem)
+            @foreach ($aboutList as $listItem)
             <li>
                 {{$listItem}}
             </li>

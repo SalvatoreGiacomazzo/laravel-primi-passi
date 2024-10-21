@@ -33,8 +33,5 @@ Route::get('/about', function () {
     ];
 
 
-    return view('about', [
-        "titolo" => $pageTitle,
-        "lista" => $aboutList
-    ]);
+    return view('about', compact("pageTitle", "aboutList"));
 });
