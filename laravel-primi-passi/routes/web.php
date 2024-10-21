@@ -14,9 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $pageName = "Laravel Primi passi";
+
+    return view('home', [
+        "nome" => $pageName
+    ]);
 });
 
 Route::get('/about', function () {
-    return view('about');
+
+    $pageTitle = "About Data Page";
+    $aboutList = [
+        "HTML",
+        "CSS",
+        "JS",
+        "PHP"
+    ];
+
+
+    return view('about', [
+        "titolo" => $pageTitle,
+        "lista" => $aboutList
+    ]);
 });
